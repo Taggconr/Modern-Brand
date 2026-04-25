@@ -1,0 +1,58 @@
+.header__logo {
+    margin-top: 20px;
+    display: flex;
+    gap: 8px;
+}
+.logo__image {
+    width: 149px;
+    height: 149px;
+}
+
+.logo--left {
+    opacity: 0;
+    transform: translateX(-100px);
+}
+
+.logo--left.animate-in {
+    animation: slideInFade 0.8s ease-out forwards;
+}
+
+.logo--right {
+    opacity: 0;
+    transform: rotate(0deg);
+}
+
+.logo--right.animate-in {
+    animation: fadeIn 0.8s ease-out forwards, slowSpin 1s ease-out forwards;
+}
+
+@keyframes slideInFade {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slowSpin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(90deg);
+    }
+}
+
+
